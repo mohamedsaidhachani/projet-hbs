@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .news-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p.date {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Actualités</h1>
+    {{#each news}}
+    <div class="news-item">
+        <h2>{{title}}</h2>
+        <p>{{desciption}}</p>
+        <p>Date : {{date_publication}}</p>
+    </div>
+    {{/each}}
+
+</body>
+
+</html>
